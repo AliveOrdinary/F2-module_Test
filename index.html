@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h3 class="nav-head">Student Portal</h3>
+    </nav>
+
+    <section class="search">
+        <div class="grid-container">
+            <input class="search-box" type="text" placeholder="Search.." onkeyup="search(this,event)">
+            <button class="search-btn">Search</button>
+        </div>
+    </section>
+
+    <section class="sort">
+        <div class="sort-container">
+            <button class="sort-btn" id="sort-1" onclick="show_data(sort_by_name = 1)">Sort A->Z</button>
+            <button class="sort-btn" id="sort-2" onclick="show_data(sort_by_name = 2)">Sort Z->A</button>
+            <button class="sort-btn" id="sort-3" onclick="show_data(sort_by_name = 0,sort_by_marks = true)">Sort By Marks</button>
+            <button class="sort-btn" id="sort-4" onclick="show_data(sort_by_name = 0,sort_by_marks = false, sort_by_passing = true)">Sort By Passing</button>
+            <button class="sort-btn" id="sort-5" onclick="show_data(sort_by_name = 0,sort_by_marks = false, sort_by_passing = false,sort_by_class = true)">Sort By Class</button>
+            <button class="sort-btn" id="sort-6" onclick="gender()">Sort By Gender</button>
+        </div>
+    </section>
+
+    <section class="table">
+        <div class="tableContainerDiv">
+            <table id="table" class="table_style"></table>
+            <h1 class="table-header">Male</h1>
+            <table id="male-table" class="table_style"></table>
+            <h1 class="table-header">Female</h1>
+            <table id="female-table" class="table_style"></table>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
